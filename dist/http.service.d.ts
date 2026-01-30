@@ -14,5 +14,5 @@ export declare class HttpService {
     putForm<T = any, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Observable<AxiosResponse<T, D>>;
     patchForm<T = any, D = any>(url: string, data?: D, config?: AxiosRequestConfig<D>): Observable<AxiosResponse<T, D>>;
     get axiosRef(): AxiosInstance;
-    protected makeObservable<T>(axios: (...args: any[]) => AxiosPromise<T>, ...args: any[]): Observable<AxiosResponse<T, any>>;
+    protected makeObservable<T>(axios: (...args: any[]) => AxiosPromise<T>, ...args: any[]): Observable<AxiosResponse<T, any, {}>>;
 }
